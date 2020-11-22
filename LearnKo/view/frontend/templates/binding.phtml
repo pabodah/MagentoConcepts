@@ -1,0 +1,20 @@
+<div data-bind="scope: 'text-binding'">
+    <div><?= "Scope Binding" ?></div>
+    <div id="main">
+        <h1 data-bind="text: sayHello"></h1>
+    </div>
+</div>
+
+<script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "text-binding": {
+                            "component": "MagentoConcepts_LearnKo/js/binding"
+                        }
+                    }
+                }
+            }
+        }
+</script>

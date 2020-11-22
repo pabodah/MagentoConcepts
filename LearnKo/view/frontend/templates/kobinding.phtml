@@ -1,0 +1,19 @@
+<div data-bind="scope: 'text-binding'">
+    <div><?= "Scope Binding" ?></div>
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "text-binding": {
+                            "component": "MagentoConcepts_LearnKo/js/kobinding",
+                            "template" : "MagentoConcepts_LearnKo/kobinding"
+                        }
+                    }
+                }
+            }
+        }
+</script>
