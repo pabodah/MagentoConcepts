@@ -1,5 +1,34 @@
 <?php
 /** @var \Magento\Framework\View\Element\Template $block */
 ?>
-<?= "Layout module outpu" ?>
 <?= $block->getData('some_string') ?>
+
+<br>
+
+<?php if ($block->getData('is_active')): ?>
+    <?= "This checks boolean argument type to display"; ?>
+<?php endif; ?>
+
+<br>
+
+<?= $block->getData('some_number'); ?>
+
+<br>
+
+<?= $block->getData('null_value'); ?>
+
+<br>
+
+<select>
+    <?php foreach ($block->getData('custom_array') as $item): ?>
+        <option><?= $item; ?></option>
+    <?php endforeach; ?>
+</select>
+
+<br>
+
+<select>
+    <?php foreach ($block->getData('options') as $item): ?>
+        <option value="<?= $item['value']; ?>"><?= $item['label']; ?></option>
+    <?php endforeach; ?>
+</select>

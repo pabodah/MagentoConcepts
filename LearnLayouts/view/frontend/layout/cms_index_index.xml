@@ -4,10 +4,18 @@
         <referenceContainer name="main">
             <container name="learn-layouts" htmlTag="div" htmlClass="learn-layouts">
                 <block class="Magento\Framework\View\Element\Template"
-                       name="layout.exampl.one"
+                       name="layout.example.one"
                        template="MagentoConcepts_LearnLayouts::sub-heading.phtml">
                     <arguments>
-                        <argument name="some_string" xsi:type="string">Some String</argument>
+                        <argument name="some_string" xsi:type="string">This is a string type argument</argument>
+                        <argument name="is_active" xsi:type="boolean">true</argument>
+                        <argument name="some_number" xsi:type="number">100</argument>
+                        <argument name="null_value" xsi:type="null" />
+                        <argument name="custom_array" xsi:type="array">
+                            <item name="array_key_one" xsi:type="string">First Item</item>
+                            <item name="array_key_two" xsi:type="string">Second Item</item>
+                        </argument>
+                        <argument name="options" xsi:type="options" model="MagentoConcepts\LearnLayouts\Source\Options\Dropdown" />
                     </arguments>
                 </block>
             </container>
